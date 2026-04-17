@@ -139,6 +139,14 @@ h1 {
   </iframe>
 </div>
 
+<!-- Music Button -->
+<div class="section">
+  <button onclick="playMusic()" 
+  style="background:#ff4d6d;color:white;">
+  🎵 Play Music
+  </button>
+</div>
+
 <!-- WhatsApp Share -->
 <div class="section">
   <button onclick="shareWhatsApp()" 
@@ -149,8 +157,9 @@ h1 {
 
 </div>
 
-<audio id="music" loop autoplay>
-  <<source src="Mohe.mp3">" type="audio/mpeg">
+<!-- MUSIC -->
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 <script>
@@ -158,7 +167,6 @@ h1 {
 function start(){
   document.getElementById("openScreen").style.display="none";
   document.getElementById("main").style.display="block";
-  document.getElementById("music").play();
 
   // hearts
   setInterval(()=>{
@@ -183,6 +191,11 @@ function start(){
     document.body.appendChild(f);
     setTimeout(()=>f.remove(),5000);
   },500);
+}
+
+// PLAY MUSIC FUNCTION
+function playMusic(){
+  document.getElementById("music").play();
 }
 
 // countdown
