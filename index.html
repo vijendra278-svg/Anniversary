@@ -3,86 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anniversary Invitation</title>
+<title>Anniversary</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
 
 <style>
 body {
-  margin: 0;
+  margin:0;
   font-family: 'Poppins', sans-serif;
   background: black;
-  color: white;
-  overflow-x: hidden;
+  color:white;
+  overflow-x:hidden;
 }
 
-/* Tap Screen */
+/* Tap screen */
 #openScreen {
-  height: 100vh;
-  background: linear-gradient(to bottom, #2c003e, #000);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(#2c003e,#000);
 }
 
 #openScreen h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 50px;
+  font-family:'Great Vibes';
+  font-size:50px;
 }
 
 button {
-  padding: 15px 30px;
-  font-size: 18px;
-  border: none;
-  border-radius: 30px;
-  background: gold;
-  color: black;
-  cursor: pointer;
+  padding:15px 30px;
+  border:none;
+  border-radius:30px;
+  background:gold;
+  cursor:pointer;
 }
 
 /* Main */
 #main {
-  display: none;
-  text-align: center;
-  padding: 20px;
-  animation: fadeIn 2s;
+  display:none;
+  text-align:center;
+  animation:fade 2s;
 }
 
 h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 55px;
-  color: gold;
-}
-
-.names {
-  font-size: 30px;
-  margin: 10px 0;
+  font-family:'Great Vibes';
+  font-size:55px;
+  color:gold;
 }
 
 .section {
-  margin: 40px 0;
+  margin:40px 20px;
 }
 
 .card {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 15px;
+  background:rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:15px;
 }
 
-/* Floating hearts */
+/* Photo */
+.photo img {
+  width:250px;
+  border-radius:15px;
+  border:3px solid gold;
+}
+
+/* hearts */
 .heart {
-  position: fixed;
-  color: red;
-  animation: float 5s linear infinite;
+  position:fixed;
+  animation:float 5s linear infinite;
 }
 
 @keyframes float {
-  from { transform: translateY(100vh); }
-  to { transform: translateY(-10vh); }
+  from {transform:translateY(100vh);}
+  to {transform:translateY(-10vh);}
 }
 
-@keyframes fadeIn {
+@keyframes fade {
   from {opacity:0;}
   to {opacity:1;}
 }
@@ -91,79 +89,91 @@ h1 {
 
 <body>
 
-<!-- Tap to Open -->
+<!-- Tap -->
 <div id="openScreen">
   <h1>💖 Tap to Open 💖</h1>
   <button onclick="start()">Open Invitation</button>
 </div>
 
-<!-- Main Content -->
+<!-- Main -->
 <div id="main">
 
-  <h1>Happy Anniversary</h1>
+<h1>Happy Anniversary</h1>
 
-  <div class="names">
-    Vijendra Chauhan ❤️ Rama Chauhan
-  </div>
+<div class="section">
+  <h2>Vijendra Chauhan ❤️ Rama Chauhan</h2>
+</div>
 
-  <div class="section card">
-    <p>📅 Wedding Date: 22 April 2016</p>
-    <p>📍 Kapashera, New Delhi</p>
-  </div>
+<div class="section card">
+  <p>📅 22 April 2016</p>
+  <p>📍 Kapashera, New Delhi</p>
+</div>
 
-  <div class="section card">
-    <p>
-      "10 years of love, trust & togetherness 💕<br><br>
-      Jitni pyari shuruaat thi, utna hi strong rishta aaj bhi hai 💫<br>
-      Rab kare yo saath yu hi bana rahe!"
-    </p>
-  </div>
+<!-- Photo -->
+<div class="section photo">
+  <img src="https://via.placeholder.com/250" alt="couple photo">
+</div>
 
-  <div class="section">
-    <h2 id="countdown"></h2>
-  </div>
+<div class="section card">
+  <p>
+    10 years of love & togetherness 💕<br><br>
+    "Rab kare yo saath yu hi bana rahe"
+  </p>
+</div>
+
+<!-- Countdown -->
+<div class="section">
+  <h2 id="countdown"></h2>
+</div>
+
+<!-- Map -->
+<div class="section">
+  <iframe 
+    src="https://www.google.com/maps?q=Kapashera%20New%20Delhi&output=embed"
+    width="90%" height="250" style="border:0;border-radius:10px;">
+  </iframe>
+</div>
 
 </div>
 
 <!-- Music -->
 <audio id="music" loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
+  <source src="https://www.pagalworld.com.se/files/download/id/6460" type="audio/mpeg">
 </audio>
 
 <script>
 
-function start() {
-  document.getElementById("openScreen").style.display = "none";
-  document.getElementById("main").style.display = "block";
+function start(){
+  document.getElementById("openScreen").style.display="none";
+  document.getElementById("main").style.display="block";
   document.getElementById("music").play();
 
-  // floating hearts
-  setInterval(() => {
-    let heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = "❤️";
-    heart.style.left = Math.random()*100 + "vw";
-    heart.style.fontSize = (20 + Math.random()*20) + "px";
-    document.body.appendChild(heart);
-
-    setTimeout(() => heart.remove(), 5000);
-  }, 500);
+  // hearts
+  setInterval(()=>{
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤️";
+    h.style.left=Math.random()*100+"vw";
+    h.style.fontSize=(20+Math.random()*20)+"px";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),5000);
+  },500);
 }
 
-// Countdown
-var date = new Date("April 22, 2026").getTime();
+// countdown
+var d=new Date("April 22, 2026").getTime();
 
-setInterval(function() {
-  var now = new Date().getTime();
-  var gap = date - now;
+setInterval(()=>{
+  var now=new Date().getTime();
+  var gap=d-now;
 
-  var d = Math.floor(gap / (1000*60*60*24));
-  var h = Math.floor((gap % (1000*60*60*24))/(1000*60*60));
-  var m = Math.floor((gap % (1000*60*60))/(1000*60));
+  var days=Math.floor(gap/(1000*60*60*24));
+  var hours=Math.floor((gap%(1000*60*60*24))/(1000*60*60));
+  var minutes=Math.floor((gap%(1000*60*60))/(1000*60));
 
-  document.getElementById("countdown").innerHTML =
-    "⏳ " + d + " Days " + h + " Hours " + m + " Minutes";
-}, 1000);
+  document.getElementById("countdown").innerHTML=
+  "⏳ "+days+" Days "+hours+" Hours "+minutes+" Minutes";
+},1000);
 
 </script>
 
