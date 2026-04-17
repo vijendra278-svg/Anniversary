@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Anniversary</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
@@ -10,8 +11,8 @@
 <style>
 body {
   margin:0;
-  font-family: 'Poppins', sans-serif;
-  background: black;
+  font-family:'Poppins',sans-serif;
+  background:black;
   color:white;
   overflow-x:hidden;
 }
@@ -20,10 +21,10 @@ body {
 #openScreen {
   height:100vh;
   display:flex;
-  flex-direction:column;
   justify-content:center;
   align-items:center;
-  background: linear-gradient(#2c003e,#000);
+  flex-direction:column;
+  background:linear-gradient(#2c003e,#000);
 }
 
 #openScreen h1 {
@@ -64,12 +65,12 @@ h1 {
 
 /* Photo */
 .photo img {
-  width:250px;
+  width:260px;
   border-radius:15px;
   border:3px solid gold;
 }
 
-/* hearts */
+/* Hearts */
 .heart {
   position:fixed;
   animation:float 5s linear infinite;
@@ -109,46 +110,42 @@ h1 {
   <p>📍 Kapashera, New Delhi</p>
 </div>
 
-<!-- Photo -->
+<!-- PHOTO (IMPORTANT CHANGE HERE) -->
 <div class="section photo">
-  <img src="https://via.placeholder.com/250" alt="couple photo">
+  <img src="20211024_215017.jpg">
 </div>
 
 <div class="section card">
   <p>
     10 years of love & togetherness 💕<br><br>
-    "Rab kare yo saath yu hi bana rahe"
+    Rab kare yo saath yu hi bana rahe
   </p>
 </div>
 
-<!-- Countdown -->
 <div class="section">
   <h2 id="countdown"></h2>
 </div>
 
-<!-- Map -->
 <div class="section">
   <iframe 
     src="https://www.google.com/maps?q=Kapashera%20New%20Delhi&output=embed"
-    width="90%" height="250" style="border:0;border-radius:10px;">
+    width="90%" height="250" style="border-radius:10px;">
   </iframe>
 </div>
 
 </div>
 
-<!-- Music -->
+<!-- MUSIC (only ONE source) -->
 <audio id="music" loop>
-  <source src="https://www.pagalworld.com.se/files/download/id/6460" type="audio/mpeg">
+  <source src="https://pagalfree.com/musics/128-52-gaj-ka-daman-renuka-panwarr-128-kbps-sound.mp3">
 </audio>
 
 <script>
-
 function start(){
   document.getElementById("openScreen").style.display="none";
   document.getElementById("main").style.display="block";
   document.getElementById("music").play();
 
-  // hearts
   setInterval(()=>{
     let h=document.createElement("div");
     h.className="heart";
@@ -160,7 +157,7 @@ function start(){
   },500);
 }
 
-// countdown
+// Countdown
 var d=new Date("April 22, 2026").getTime();
 
 setInterval(()=>{
@@ -174,7 +171,6 @@ setInterval(()=>{
   document.getElementById("countdown").innerHTML=
   "⏳ "+days+" Days "+hours+" Hours "+minutes+" Minutes";
 },1000);
-
 </script>
 
 </body>
