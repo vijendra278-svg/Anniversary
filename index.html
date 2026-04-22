@@ -1,35 +1,145 @@
-<div style="text-align:center; color:white; margin-top:20px;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anniversary Invitation</title>
 
-  <!-- Invitation Text -->
-  <h2 style="color:#ffd700;">You're Invited ❤️</h2>
-  <p style="font-size:18px;">
-    You are warmly invited to celebrate our Anniversary 💖 <br>
-    Your presence will make our day special.
-  </p>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
 
-  <!-- Date & Location -->
-  <p>
-    📅 22 April 2026 <br>
-    📍 Kapashera, New Delhi
-  </p>
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: white;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  padding: 40px 20px;
+}
+
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: gold;
+}
+
+.names {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+/* Card Section */
+.card {
+  background: rgba(255,255,255,0.05);
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(255,215,0,0.2);
+}
+
+/* Image */
+.photo img {
+  width: 180px;
+  border-radius: 15px;
+  border: 3px solid gold;
+}
+
+/* Invite Text */
+.invite {
+  margin-top: 20px;
+}
+
+.invite h2 {
+  color: gold;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.rsvp {
+  background: #ff4d6d;
+}
+
+.share {
+  background: #25D366;
+}
+
+.map {
+  background: #007bff;
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Happy Anniversary</h1>
+  <div class="names">Vijendra ❤️ Rama</div>
+</div>
+
+<!-- Card -->
+<div class="card">
+
+  <!-- Photo -->
+  <div class="photo">
+    <img src="your-photo.jpg" alt="Couple Photo">
+  </div>
+
+  <!-- Invite -->
+  <div class="invite">
+    <h2>You're Invited 💖</h2>
+    <p>
+      You are warmly invited to celebrate our Anniversary.<br>
+      Your presence will make our day special.
+    </p>
+
+    <p>
+      📅 22 April 2026 <br>
+      📍 Kapashera, New Delhi
+    </p>
+  </div>
 
   <!-- Buttons -->
-  <div style="margin-top:20px;">
-
-    <!-- RSVP Button (Desktop + Mobile Working) -->
+  <div>
     <a href="https://web.whatsapp.com/send?phone=917011200730&text=I%20will%20join%20your%20Anniversary%20celebration%20❤️"
-       target="_blank"
-       style="background:#ff4d6d; padding:10px 20px; color:white; text-decoration:none; border-radius:20px; margin-right:10px;">
-       RSVP Now
-    </a>
+       target="_blank" class="btn rsvp">RSVP Now</a>
 
-    <!-- WhatsApp Share Button -->
-    <a href="https://web.whatsapp.com/send?text=You%27re%20invited%20to%20celebrate%20our%20Anniversary%20❤️%0A📅%2022%20April%202026%0A📍%20Kapashera,%20New%20Delhi%0APlease%20join%20us%0Ahttps://vijendra278-svg.github.io/Anniversary10/"
-       target="_blank"
-       style="background:#25D366; padding:10px 20px; color:white; text-decoration:none; border-radius:20px;">
-       Share on WhatsApp
-    </a>
+    <a href="https://web.whatsapp.com/send?text=You%27re%20invited%20to%20celebrate%20our%20Anniversary%20❤️%0A📅%2022%20April%202026%0A📍%20Kapashera,%20New%20Delhi%0Ahttps://vijendra278-svg.github.io/Anniversary10/"
+       target="_blank" class="btn share">Share</a>
 
+    <a href="https://www.google.com/maps?q=Kapashera+New+Delhi"
+       target="_blank" class="btn map">View Location</a>
   </div>
 
 </div>
+
+<!-- Footer -->
+<div class="footer">
+  Made with ❤️ | 10 Years of Togetherness
+</div>
+
+</body>
+</html>
